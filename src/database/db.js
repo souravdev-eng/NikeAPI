@@ -10,7 +10,7 @@ const getDB = () => {
     console.log('Reusing the old client');
   }
 
-  const database = client.db('test');
+  const database = client.db('nike');
   const products = database.collection('products');
   const orders = database.collection('orders');
 
