@@ -3,7 +3,7 @@ const router = express.Router();
 const { createOrder, getOrder } = require('../database/orders');
 
 router.get('/:reference', async (req, res) => {
-  const order = await getOrder(req.params.reference);
+  const order = await getOrder(req?.params?.reference);
 
   if (!order) {
     res.status(404).send({ status: 'FAILED', error: 'Order not found' });
